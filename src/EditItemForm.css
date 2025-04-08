@@ -1,0 +1,29 @@
+.edit-item-form {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+
+  }
+  
+  .edit-item-form input {
+    padding: 12px 15px;
+    border: 2px solid #b89aff;
+    border-radius: 25px;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    background-color: rgba(3, 3, 3, 0.8);
+    box-shadow: 0 2px 10px rgba(184, 154, 255, 0.2);
+    width: 400px;
+
+}
+.edit-item-form input:focus {
+    outline: none;
+    border-color: #8a2be2;
+    box-shadow: 0 2px 15px rgba(138, 43, 226, 0.3);
+    transform: scale(1.05);
+}
+
+.edit-item-form input::placeholder {
+    color: #999;
+    font-style: italic;
+}

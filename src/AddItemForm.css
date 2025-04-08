@@ -1,0 +1,221 @@
+/* AddItemForm.css */
+
+.add-item-btn {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 25px; /* Daha yuvarlak köşeler */
+  cursor: pointer;
+  position: fixed;
+  top: 310px;
+  right: 90px;
+  padding: 12px 6px; /* Daha iyi padding */
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase; /* Tüm harfleri büyük */
+  letter-spacing: 0.5px; /* Harf aralığı */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Gölge efekti */
+  transition: all 0.3s ease; /* Daha yumuşak geçiş */
+  width: auto; /* İçeriğe göre genişlik */
+  min-width: 120px; /* Minimum genişlik */
+  height: auto; /* Yüksekliği içeriğe bırak */
+}
+
+.add-item-btn:hover {
+  background-color: #3e8e41; /* Koyu yeşil */
+  transform: translateY(-2px); /* Hafif yukarı hareket */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Hover'da gölge artışı */
+}
+
+.add-item-btn:active {
+  transform: translateY(0); /* Tıklamada hareket */
+}
+
+/* React Icons için ikon stili */
+.add-item-btn .icon {
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+}
+
+/* Veya "+" karakteri için ikon stili */
+.add-item-btn .icon-char {
+  font-size: 18px;
+  font-weight: bold;
+  margin-right: 5px;
+}
+  
+  .add-item-btn:hover {
+    background-color: #45a049;
+  }
+  
+  .add-item-form {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    
+    max-width: 500px;
+    background-color: rgba(255, 255, 255);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 100px;
+    height: 200px;
+    width: 500px;
+    right: 75px;
+  }
+  
+  .add-item-form input {
+    padding: 12px 15px;
+    border: 2px solid #b89aff;
+    border-radius: 25px;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    background-color: rgba(3, 3, 3, 0.8);
+    box-shadow: 0 2px 10px rgba(184, 154, 255, 0.2);
+    width: 200px;
+}
+.add-item-form input:focus {
+    outline: none;
+    border-color: #8a2be2;
+    box-shadow: 0 2px 15px rgba(138, 43, 226, 0.3);
+    transform: scale(1.10);
+}
+
+.add-item-form input::placeholder {
+    color: #999;
+    font-style: italic;
+}
+  .add-item-form button {
+    padding: 10px 10px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s;
+    
+  
+  }
+  
+  .add-item-form button:first-of-type {
+    background-color: #4CAF50;
+    color: white;
+  }
+  
+  .add-item-form button:last-of-type {
+    background-color: #f44336;
+    color: white;
+    margin-left: 10px;
+  }
+  
+  .add-item-form button:hover {
+    opacity: 0.9;
+  }
+  
+  /* Butonları yan yana hizalamak için */
+  .add-item-form .button-group {
+    display: flex;
+    justify-content: flex-start ;
+    gap: 2px;
+    
+    
+  }
+  .button-group {
+    display: fixed;
+    gap: 10px;
+
+  }
+  .hammaddeekle {
+    background-color: #5d5dff;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    width: auto; /* İçeriğe göre otomatik genişlik */
+    min-width: 120px; /* Minimum genişlik belirle */
+    margin: 5px 0; /* Üst ve alt boşluk */
+    display: inline-block; /* Satır içi blok öğe */
+  }
+  
+  .hammaddeekle:hover {
+    background-color: #4a4acf;
+    transform: translateY(-1px);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  }
+  /* AddItemForm.css */
+  .ingredients-section {
+    margin-bottom: 0px;
+    background-color: rgb(117, 117, 117);
+    color: white;
+    width: 250px;
+    height: 220px;
+    max-width: 250px;
+    max-height: 250px;
+    right: 75px;
+    position: fixed;
+    border-radius: 0px;
+    padding: 10px;
+    top: 100px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow-y: auto; /* Scrollbar için */
+  }
+  
+  /* Scrollbar stilleri */
+  .ingredients-section::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  .ingredients-section::-webkit-scrollbar-track {
+    background: #555;
+    border-radius: 4px;
+  }
+  
+  .ingredients-section::-webkit-scrollbar-thumb {
+    background-color: #4CAF50;
+    border-radius: 4px;
+  }
+  
+  .ingredients-section::-webkit-scrollbar-thumb:hover {
+    background-color: #3e8e41;
+  }
+  
+  .ingredients-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 2px;
+    margin-top: 2px;
+  }
+  
+  .ingredient-item {
+    padding: 4px 4px;
+    width: auto;
+    background-color: #333;
+    color: white;
+    border-radius: 15px;
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.2s;
+    border: 1px solid #555;
+  }
+  
+  .ingredient-item:hover {
+    background-color: #444;
+    transform: translateY(-2px);
+  }
+  
+  .ingredient-item.selected {
+    background-color: #4CAF50;
+    color: white;
+    font-weight: bold;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  }
+
+/* Diğer mevcut stilleriniz... */

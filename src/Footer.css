@@ -1,0 +1,45 @@
+.footer {
+    height: 50px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+
+    color: white;
+    padding: 20px 0;
+}
+
+.line {
+    width: 80%;
+    height: 2px;
+    background-color: white;
+    margin: 0 auto 10px auto;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.footer-text {
+    margin: 0;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icons a {
+    color: white;
+    font-size: 24px;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #1da1f2;
+    transform: scale(1.2);
+}

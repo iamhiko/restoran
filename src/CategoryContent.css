@@ -1,0 +1,158 @@
+/* CategoryContent.css */
+/* Category Content - Ana içerik paneli */
+.category-content {
+  position: fixed; /* Sabit konumda kalır */
+  top: 100px; /* Üstten 105px boşluk bırak */
+  right: 75px; /* Sağdan 75px boşluk bırak */
+  width: 500px; /* Genişlik */
+  height: 200px ;
+  background-color: rgba(255, 255, 255, 0.3);
+  padding: 20px;
+  border-radius: 4px;
+  z-index: 1000; /* Diğer öğelerden önde olmasını sağlar */
+  overflow-y: auto; /* İçerik fazla olursa kaydırma ekler */
+}
+/* Scrollbar boyutunu ayarlama */
+::-webkit-scrollbar {
+  width: 6px; /* Yatay scrollbar için height: 6px, dikey scrollbar için width: 6px */
+  height: 6px; /* Yatay scrollbar için height: 6px */
+}
+
+/* Scrollbar arka planını (track) ayarlama */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Arka plan rengi */
+  border-radius: 10px;
+}
+
+/* Scrollbar kaydırıcısının (thumb) stilini ayarlama */
+::-webkit-scrollbar-thumb {
+  background: #888; /* Kaydırıcı rengi */
+  border-radius: 10px;
+}
+
+/* Scrollbar kaydırıcısının üzerine gelindiğinde (hover) renk değiştirme */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Kaydırıcı hover rengi */
+}
+
+
+.subcategory {
+  margin-bottom: 20px; /* Alt kısımda boşluk */
+}
+
+.items-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.item-box {
+  background-color: rgba(255, 255, 255, 0.3);
+  color: white;
+  padding: 8px;
+  border-radius: 25px;
+  font-size: 15px;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.item-box:hover {
+  background-color: #45a049;
+}
+
+/* Description Panel - Tanım paneli */
+.description-panel {
+  position: fixed;
+  background-color: rgba(255, 255, 255, 0.3);
+  padding: 20px;
+  border-radius: 4px;
+  width: 500px;
+  left: 75px;
+  height: 200px;
+  top: 370px;
+  overflow-y: auto;
+  z-index: 999;
+}
+
+/* Butonları yan yana hizalamak için container */
+.description-panel .button-container {
+  position:fixed;,
+  
+
+  gap: 12px;
+  top: 585px;
+  left: 289px;
+  display: flex;
+  justify-content: flex-end; /* Butonları sağa hizala */
+  
+}
+
+/* Temel Buton Stili */
+.description-panel button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 25px; /* Yuvarlak köşeler */
+  cursor: pointer;
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  min-width: 100px; /* Butonlar için minimum genişlik */
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  
+}
+
+/* Düzenle Butonu */
+.description-panel button:first-child {
+  background-color: #2196F3; /* Mavi */
+  color: white;
+}
+
+/* Kapat Butonu */
+.description-panel button:nth-child(2) {
+  background-color: #f44336; /* Kırmızı */
+  color: white;
+}
+
+/* Sil Butonu (DeleteContent bileşeni için) */
+.description-panel button:last-child {
+  background-color: #ff9800; /* Turuncu */
+  color: white;
+}
+
+/* Hover Efektleri */
+.description-panel button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  opacity: 0.9;
+}
+
+.description-panel button:first-child:hover {
+  background-color: #0b7dda;
+}
+
+.description-panel button:nth-child(2):hover {
+  background-color: #da190b;
+}
+
+.description-panel button:last-child:hover {
+  background-color: #e68a00;
+}
+
+/* Active Efekti */
+.description-panel button:active {
+  transform: translateY(0);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+}
+
+/* İkon Stilleri (React Icons kullanıyorsanız) */
+.description-panel button .icon {
+  font-size: 14px;
+}
