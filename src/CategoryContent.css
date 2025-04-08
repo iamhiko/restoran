@@ -50,7 +50,7 @@
   background-color: rgba(255, 255, 255, 0.3);
   color: white;
   padding: 8px;
-  border-radius: 25px;
+  border-radius: 5px;
   font-size: 15px;
   text-align: center;
   cursor: pointer;
@@ -73,6 +73,8 @@
   top: 370px;
   overflow-y: auto;
   z-index: 999;
+  font-weight: 600;
+  font-size: 16px;
 }
 
 /* Butonları yan yana hizalamak için container */

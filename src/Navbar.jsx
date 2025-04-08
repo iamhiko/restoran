@@ -1,14 +1,29 @@
-import React, { useState } from "react";
-import './Navbar.css'
-function Navbar(){
-    return(
-        <div>
-            <nav className="navbar">
-            <div className="line2"></div>
-                <h1>Virtus Food</h1>    
-            </nav>
+import React from 'react';
+import { useNavigate } from 'react-router-dom';
+import { signOut } from 'firebase/auth';
+import { auth } from './firebaseConfig';
+import './navbar.css';
 
-        </div>
-    )
-}
+const Navbar = ({ user }) => {
+  const navigate = useNavigate();
+
+  const handleLogout = async () => {
+    try {
+      await signOut(auth);
+      navigate('/login');
+    } catch (error) {
+      console.error('Logout error:', error);
+    }
+  };
+
+  return (
+    <nav className="navbar">
+        <button className="logout-btn" onClick={handleLogout}>
+          Logout
+        </button>
+        
+    </nav>
+  );
+};
+
 export default Navbar;

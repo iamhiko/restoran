@@ -74,12 +74,7 @@ const AddItemForm = ({ category, onAddItem }) => {
 
   const getLabel = (key) => {
     switch (key) {
-      case "drinks":
-        return "İçecek";
-      case "yiyecekler":
-        return "Yiyecek";
-      case "desserts":
-        return "Tatlı";
+
       default:
         return "Ürün";
     }

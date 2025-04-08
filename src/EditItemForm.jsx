@@ -10,7 +10,7 @@ const EditItemForm = ({ item, onSave, onCancel }) => {
     name: item.name,
     description: item.description,
     ingredients: Array.isArray(item.ingredients) ? item.ingredients.join(", ") : item.ingredients,
-    price: item.price,
+    price: item.price
   });
 
   const handleInputChange = (e) => {
@@ -36,7 +36,7 @@ const EditItemForm = ({ item, onSave, onCancel }) => {
         name: editedItem.name,
         description: editedItem.description,
         ingredients: ingredientsArray,
-        price: editedItem.price,
+        price: editedItem.price
       };
 
       // Eğer isim değiştiyse, eski öğeyi silip yenisini ekleyelim
@@ -80,9 +80,8 @@ const EditItemForm = ({ item, onSave, onCancel }) => {
         name="price"
         value={editedItem.price}
         onChange={handleInputChange}
-        placeholder="Fiyat Düzenle"
+        placeholder="Fiyat"
       />
-
       <div className="button-group">
         <button onClick={handleSaveChanges}>Kaydet</button>
         <button onClick={onCancel}>İptal</button>

@@ -3,6 +3,7 @@
 // Firebase modüllerini import et
 import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";  // Firestore modülünü import ettik
+import { getAuth } from "firebase/auth";  
 
 // Firebase yapılandırması
 const firebaseConfig = {
@@ -20,5 +21,6 @@ const app = initializeApp(firebaseConfig);
 
 // Firestore veritabanı bağlantısını al
 const db = getFirestore(app);  // getFirestore fonksiyonu ile Firestore'u alıyoruz
+export const auth = getAuth(app);
 
 export { db };  // Firestore veritabanı referansını export ediyoruz

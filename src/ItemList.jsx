@@ -4,6 +4,7 @@ import { doc, getDoc, updateDoc } from "firebase/firestore";
 import './ItemList.css';
 import { FaTrash } from "react-icons/fa"; 
 import AddItemForm from "./AddItemForm";
+
 function ItemList() {
   const [materials, setMaterials] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -68,44 +69,47 @@ function ItemList() {
     <div className="ItemList-Container">
       <div className="header">
         <h2>Hammadde Listesi</h2>
+      </div>
+      
+      <div className="materials-container">
+        {materials.length === 0 ? (
+          <p>Listelenecek hammadde bulunamadı</p>
+        ) : (
+          <ul>
+            {materials.map((item, index) => (
+              <li className="hammaddeler" key={index}>
+                {item}
+                <button 
+                  className="delete-button"
+                  onClick={() => handleDeleteMaterial(index)}
+                >
+                  <FaTrash></FaTrash> 
+                </button>
+              </li>
+            ))}
+          </ul>
+        )}
+        
         {!isAdding ? (
           <button className="add-button" onClick={() => setIsAdding(true)}>
             + Ekle
           </button>
         ) : (
-          <div className="add-form"><div className="add-form-buttons">
-            <input
-              type="text"
-              value={newMaterial}
-              onChange={(e) => setNewMaterial(e.target.value)}
-              placeholder="Hammadde adı"
-              autoFocus
-            />
-            
+          <div className="add-form">
+            <div className="add-form-buttons">
+              <input
+                type="text"
+                value={newMaterial}
+                onChange={(e) => setNewMaterial(e.target.value)}
+                placeholder="Hammadde adı"
+                autoFocus
+              />
               <button onClick={handleAddMaterial} className="itemlist-kaydet">Kaydet</button>
               <button onClick={() => setIsAdding(false)} className="itemlist-iptal">İptal</button>
             </div>
           </div>
         )}
       </div>
-      
-      {materials.length === 0 ? (
-        <p>Listelenecek hammadde bulunamadı</p>
-      ) : (
-        <ul>
-          {materials.map((item, index) => (
-            <li className="hammaddeler" key={index}>
-              {item}
-              <button 
-                className="delete-button"
-                onClick={() => handleDeleteMaterial(index)}
-              >
-                <FaTrash></FaTrash>
-              </button>
-            </li>
-          ))}
-        </ul>
-      )}
     </div>
   );
 }

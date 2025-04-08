@@ -1,66 +1,51 @@
+/* Navbar ana kapsayıcısı: sayfanın üst kısmında sabitlenmiş, basit bir arka plan ve hafif gölgeyle */
 .navbar {
+  justify-content: flex-end; 
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-
-  background-size: cover;
-  background-position: center;
-  color: white;
-  padding: 10px 20px;
-  text-align: center;  
-}
-
-h1 {
-  margin: 0;
-  font-size: 3.5rem; /* Daha responsive boyut */
-  font-weight: 600; /* Daha kalın font */
-  letter-spacing: 8px; /* Harf aralığı */
-  text-transform: uppercase; /* Tüm harfler büyük */
-  color: #ffffff;
-  text-shadow: 
-    0 2px 4px rgba(0, 0, 0, 0.3), /* Yumuşak gölge */
-    0 4px 8px rgba(0, 0, 0, 0.15); /* Derinlik efekti */
-  padding: 0px 24px;
-  display: inline-block;
-  background: linear-gradient(45deg, #ffffff, #7d7d7d); /* Gradyan arkaplan */
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent; /* Gradyan metin efekti */
-  position: relative;
-  transition: all 0.3s ease;
-}
-
-/* Hover efekti */
-h1:hover {
-  transform: translateY(-2px);
-  text-shadow: 
-    0 4px 8px rgba(0, 0, 0, 0.2),
-    0 6px 12px rgba(0, 0, 0, 0.25);
-}
-
-/* Alt çizgi efekti */
-
-
-/* Mobil uyumlu */
-@media (max-width: 768px) {
-  h1 {
-    font-size: 2.5rem;
-    padding: 8px 16px;
-  }
-}
-.line2 {
-  position: fixed;
-  width: 80%;
-  
-  background-color: white;
-  left: 10%;
-  top: 70px;
+  height: 60px;
+  background-color: #333;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   z-index: 1000;
+}
+
+/* Logout butonu: küçük boyut, sağ üst köşede normal bir buton */
+.logout-btn {
+  margin-right: 40px;
+  width: 100px;
+  background-color: #fff;
+  border: solid 1px;
+  color: #333;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Hover etkisi */
+.logout-btn:hover {
+  background-color: #ddd;
+  transform: translateY(-1px);
+}
+
+/* Responsive ayarlar */
+@media (max-width: 600px) {
+  .navbar {
+    padding: 0 10px;
+  }
   
-  height: 3px;
-  background: linear-gradient(90deg, 
-    transparent 0%, 
-    white 50%, 
-    transparent 100%);
+  .navbar-brand h1 {
+    font-size: 1.2rem;
+  }
+  
+  .logout-btn {
+    font-size: 0.8rem;
+    padding: 4px 8px;
+  }
 }

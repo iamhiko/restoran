@@ -1,0 +1,164 @@
+/* HomeContent.css */
+
+/* Main container */
+.container {
+  position: fixed;
+  top: 100px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(255, 255, 255, 0.3);
+  overflow: hidden;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  border-radius: 4px;
+}
+
+/* Category list container */
+.category-list {
+  position: fixed;
+  top: 100px; /* Below navbar */
+  left: 75px;
+  height: 210px;
+  width: 510px;
+  max-height: calc(100vh - 200px); /* Account for navbar and form */
+  padding: 15px;
+  
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  overflow-y: auto;
+
+  z-index: 10;
+}
+
+
+
+/* Category wrapper */
+.category-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2px;
+  transition: all 0.2s ease;
+}
+
+.category-wrapper:hover {
+  transform: translateX(5px);
+}
+
+/* Category item */
+.category {
+  flex-grow: 1;
+  background-color: rgba(255, 255, 255, 0.3);
+  color: #333;
+  padding: 12px 15px;
+  
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  line-height: 0.25; /* Metin için uygun satır yüksekliği */
+  white-space: nowrap;
+  max-height: 0px;
+  min-width: 400px;
+  
+}
+
+.category:hover {
+  background-color: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.category.active {
+  background-color: #4CAF50;
+  color: white !important;
+  font-weight: 600;
+  border-color: #45a049;
+}
+
+/* Delete button */
+.delete-category-btn {
+  background: transparent;
+  border: none;
+  color: #ffb0b0;
+  cursor: pointer;
+  font-size: 14px;
+  margin-left: 8px;
+  padding: 5px;
+  border-radius: 50%;
+  transition: all 0.2s ease;
+}
+
+.delete-category-btn:hover {
+  color: #ff4444;
+  background-color: rgba(255, 68, 68, 0.1);
+  transform: scale(1.1);
+}
+
+
+/* Category form */
+.category-form {
+  position: fixed;
+
+  left: 250px;
+  background-color: transparent;
+  display: flex;
+  gap: 10px;
+  padding: 15px;
+  top: 296px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+}
+
+.category-form input {
+  flex-grow: 1;
+  padding: 10px 15px;
+  border: 1px solid #ddd;
+  border-radius: 25px;
+  font-size: 14px;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.category-form input:focus {
+  border-color: #4CAF50;
+  box-shadow: 0 0 0 2px rgba(76, 175, 80, 0.2);
+}
+
+.category-form button {
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.category-form button:hover {
+  background-color: #45a049;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.category-form button:active {
+  transform: translateY(0);
+}
+
+/* Loading state */
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  font-size: 18px;
+  color: #555;
+}

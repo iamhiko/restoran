@@ -8,9 +8,9 @@ import "./CategoryContent.css";
 import { FaEdit, FaTimes } from 'react-icons/fa';
 
 const categoryLabels = {
-  drinks: "İçecekler",
-  desserts: "Tatlılar",
-  yiyecekler: "Yiyecekler"
+  drinks: "içecekler",
+  desserts: "tatlılar",
+  yiyecekler: "yiyecekler"
 };
 
 const CategoryContent = ({ selected }) => {
